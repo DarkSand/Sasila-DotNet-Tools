@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3CB77C52-E283-4A66-A4B0-BE80770B7C88}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sasila.Common</RootNamespace>
+    <AssemblyName>SCommon</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <DocumentationFile>bin\x86\Release\SCommon.xml</DocumentationFile>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cryption\AESCryption.cs" />
+    <Compile Include="Cryption\DES3Cryption.cs" />
+    <Compile Include="Cryption\PBEWITHMD5andDESCryption.cs" />
+    <Compile Include="Cryption\SHA1Cryption.cs" />
+    <Compile Include="Http\HttpWebSet.cs" />
+    <Compile Include="Http\RequestState.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Cryption\DESCryption.cs" />
+    <Compile Include="Cryption\MD5Cryption.cs" />
+    <Compile Include="Cryption\RandCryption.cs" />
+    <Compile Include="Cryption\RSACryption.cs" />
+    <Compile Include="Http\HttpWeb.cs" />
+    <Compile Include="Http\HttpWebApp.cs" />
+    <Compile Include="Http\HttpWebPage.cs" />
+    <Compile Include="ReceiveInfoResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReceiveInfoResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\AppConfig.cs" />
+    <Compile Include="Tools\CsvHelper.cs" />
+    <Compile Include="Tools\DriverId.cs" />
+    <Compile Include="Tools\Fizzler.Systems.HtmlAgilityPack\ExtensionMethods.cs" />
+    <Compile Include="Tools\Fizzler.Systems.HtmlAgilityPack\HtmlNodeExtensions.cs" />
+    <Compile Include="Tools\Fizzler.Systems.HtmlAgilityPack\HtmlNodeOps.cs" />
+    <Compile Include="Tools\Fizzler.Systems.HtmlAgilityPack\HtmlNodeSelection.cs" />
+    <Compile Include="Tools\Fizzler\Either.cs" />
+    <Compile Include="Tools\Fizzler\IElementOps.cs" />
+    <Compile Include="Tools\Fizzler\ISelectorGenerator.cs" />
+    <Compile Include="Tools\Fizzler\LRUCache.cs" />
+    <Compile Include="Tools\Fizzler\NamespacePrefix.cs" />
+    <Compile Include="Tools\Fizzler\Parser.cs" />
+    <Compile Include="Tools\Fizzler\Reader.cs" />
+    <Compile Include="Tools\Fizzler\Selector.cs" />
+    <Compile Include="Tools\Fizzler\SelectorGenerator.cs" />
+    <Compile Include="Tools\Fizzler\Token.cs" />
+    <Compile Include="Tools\Fizzler\Tokener.cs" />
+    <Compile Include="Tools\Fizzler\TokenKind.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\crc32.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\EncodingFoundException.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlAttribute.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlAttributeCollection.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlCmdLine.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlCommentNode.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlConsoleListener.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlDocument.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlDocument.PathMethods.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlDocument.Xpath.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlElementFlag.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlEntity.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlNameTable.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlNode.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlNode.Xpath.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlNodeCollection.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlNodeNavigator.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlNodeType.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlParseError.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlParseErrorCode.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlTextNode.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlWeb.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlWeb.Xpath.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\HtmlWebException.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\IOLibrary.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\MixedCodeDocument.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\MixedCodeDocumentCodeFragment.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\MixedCodeDocumentFragment.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\MixedCodeDocumentFragmentList.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\MixedCodeDocumentFragmentType.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\MixedCodeDocumentTextFragment.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\NameValuePair.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\NameValuePairList.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\Trace.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\Trace.FullFramework.cs" />
+    <Compile Include="Tools\HtmlAgilityPack\Utilities.cs" />
+    <Compile Include="Tools\HtmlHelper.cs" />
+    <Compile Include="Tools\ImageHelper.cs" />
+    <Compile Include="Tools\ImageSplit.cs" />
+    <Compile Include="Tools\PagingUtil.cs" />
+    <Compile Include="Tools\RandomHelper.cs" />
+    <Compile Include="Tools\RarHelper.cs" />
+    <Compile Include="Tools\RegexHelper.cs" />
+    <Compile Include="Tools\SerializeHelper.cs" />
+    <Compile Include="Tools\StrExtension.cs" />
+    <Compile Include="Tools\StrHelper.cs" />
+    <Compile Include="Tools\XmlHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ReceiveInfoResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ReceiveInfoResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\countryside.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\street.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surname.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\town.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
